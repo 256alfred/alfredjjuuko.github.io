@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfred Jjuuko - Creative Artist</title>
+    <link rel="stylesheet" href="Style.css"> <!-- Link to your custom CSS stylesheet -->
+</head>
+<script src="/Script.js"></script>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Alfred Jjuuko</h1>
+        <p>Creative Artist</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my creative world!<br>
+            I am Alfred Jjuuko, a passionate creative artist with a focus on Product Photography, Graphics Design, and Marketing Strategic Planning.<br>
+            With four years of experience in the industry, I've honed my skills to deliver exceptional results.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        
+        <p>I am passionate about my work, and because of this, I have engaged in a number of projects both personal and commercial.<br>
+            Dive into my creative world below.</p>
+        <br>
+        <!-- Project Cards -->
+        <div class="portfolio-card">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <a href="https://drive.google.com/drive/folders/1bkh-ModDqfLJxb07FjYCwUJQteu_KNlk?usp=share_link">View Project</a>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <a href="https://drive.google.com/drive/folders/1itdeZDAb9GWFq1uN-DTVbjBEA61v9T1L?usp=share_link">View Project</a>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Project 3</h3>
+            <p>Description of Project 3.</p>
+            <a href="https://drive.google.com/drive/folders/1bGs6kcTVxNziA3SNIbDM4hIOgpvMe4-0?usp=share_link">View Project</a>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Project 4</h3>
+            <p>Description of Project 4.</p>
+            <a href="https://drive.google.com/drive/folders/1gBl67bSCp76oBMWNa9pGvW5qGVZ6m_tF?usp=share_link">View Project</a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <br>
+        <p>I obtained my Bachelor's Degree in Industrial Design and Fine Arts from Makerere University in Uganda.<br>
+        Afterward, I completed a short course in Fundamentals of Digital Marketing from Google Courses.</p> 
+        <br>
+        <p>I embarked on my creative and marketing journey in 2019 as an intern at Maad McCain Advertising.<br>
+        Over the next two years, I climbed the ranks to become a Digital Account Manager. From 2021 to 2023, I furthered my career as a Digital Lead at Clever Box Creations.<br>
+        <br>My stay at Clever Box allowed me to venture deeper into the creative and communications world.</p>
+        <p>Now, I serve my customers and clients with unwavering confidence and a wealth of professional expertise in the realms of my aforementioned skills as a creative artist.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <p>As a freelancer affiliated with Ffene Productions, I offer a range of creative services including Product Photography, Graphics Design, Marketing Strategy, Print, Photo Restoration, and Historical Restoration. My goal is to bring your ideas to life and help them grow.</p>
+
+        <br>
+        <div class="service">
+            <h3>Photography</h3>
+            <p>Proficient in product photography with a keen eye for detail and composition.</p>
+        </div>
+
+        <br>
+        <div class="service">
+            <h3>Graphics Design</h3>
+            <p>Mastery of Adobe Illustrator, Photoshop, Lightroom, and Premier Pro.</p>
+        </div>
+
+        <br>
+        <div class="service">
+            <h3>Digital Marketing</h3>
+            <p>Comprehensive knowledge of digital marketing strategies and tactics.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Let's collaborate on your next creative project! <br>Reach out to me via WhatsApp or email:</p>
+        <ul>
+            <li>WhatsApp: <a href="https://wa.me/256751448224" target="_blank">0751448224</a></li>
+            <li>Email: <a href="mailto:alfredjjuuko1996@gmail.com">alfredjjuuko1996@gmail.com</a></li>
+        </ul>
+        <p>Location: Ntinda, Bukoto</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Alfred Jjuuko | Ideas that Grow</p>
+    </footer>
+
+    <!-- JavaScript code goes here -->
+    <script>
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add a fun animation to the header
+        const header = document.querySelector('header');
+        header.addEventListener('mouseover', function () {
+            this.classList.add('header-bounce');
+        });
+        header.addEventListener('animationend', function () {
+            this.classList.remove('header-bounce');
+        });
+
+        // Display a random inspirational quote in the footer
+        const quotes = [
+            "Creativity is intelligence having fun. - Albert Einstein",
+            "Art is not freedom from discipline, but disciplined freedom. - John F. Kennedy",
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Every artist was first an amateur. - Ralph Waldo Emerson"
+        ];
+        const footer = document.querySelector('footer');
+        const quoteText = document.createElement('p');
+        quoteText.innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+        footer.appendChild(quoteText);
+
+        // Add a hover effect to portfolio cards
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+        portfolioCards.forEach(card => {
+            card.addEventListener('mouseover', function () {
+                this.classList.add('card-hover');
+            });
+            card.addEventListener('mouseout', function () {
+                this.classList.remove('card-hover');
+            });
+        });
+    </script>
+</body>
+</html>
